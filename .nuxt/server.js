@@ -21,8 +21,8 @@ const createNext = (ssrContext) => (opts) => {
   }
   opts.query = stringify(opts.query)
   opts.path = opts.path + (opts.query ? '?' + opts.query : '')
-  if (!opts.path.startsWith('http') && ('/' !== '/' && !opts.path.startsWith('/'))) {
-    opts.path = urlJoin('/', opts.path)
+  if (!opts.path.startsWith('http') && ('Shoppingcart' !== '/' && !opts.path.startsWith('Shoppingcart'))) {
+    opts.path = urlJoin('Shoppingcart', opts.path)
   }
   // Avoid loop redirect
   if (opts.path === ssrContext.url) {
